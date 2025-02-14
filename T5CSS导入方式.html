@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 导入方式</title>
+    
+    <style>
+        p{
+            color:blue;
+            font-size: 25px;
+        }
+        h2{
+            color: green;
+        }
+        h3{
+            color: blue;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/mystyle.css">
+
+</head>
+<body>
+    <p>CSS层叠样式表</p>
+    <h1 style="color: red;">内联样式</h1>
+    <h2>内部样式</h2>
+    <h3>外部样式，在head里用link，内联优先级最高，外部和内部同时写的话显示写在后面的</h3>
+</body>
+</html>
