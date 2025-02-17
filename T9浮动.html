@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            background-color: aqua;
+            /* height: 150px; */
+            border: 3px solid brown;
+            /* 清除浮动的方法一 */
+            /* overflow: hidden; */
+        }
+        .right-son{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            float: right;
+        }
+        .left-son{
+            width: 50px;
+            height: 50px;
+            background-color: yellowgreen;
+            float: left;
+        }
+
+        /* 清除浮动的第二种方法 */
+        .father::after{
+            display: table;
+            content: "";
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+     <div class="father">
+        <div class="left-son">
+            左浮动
+        </div>
+        <div class="right-son">
+            右浮动
+        </div>
+     </div>
+</body>
+</html>
