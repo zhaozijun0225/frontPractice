@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS语法</title>
+</head>
+<body>
+    <script>
+        <!-- var函数作用域，let块级作用域，推荐用let和const -->
+        var x;
+        let y=5;
+        const PI=3.14;
+        console.log(x,y,PI);
+        let name='AAA';
+        console.log(name);
+        let empty=null;
+        // undefined 表示目前没有返回值（上面的x），null表示空值
+        console.log(empty);
+
+        if(y>10){
+            alert('>10');
+        }else if(y>5){
+            alert('>5');
+        }else{
+            alert('qita');
+        }
+        
+        for(let i=10;i>0;i--){
+            console.log(i);
+        }
+        let count = 0;
+        while(count<11){
+            console.log(count);
+            count++;
+            if(count==5){
+                continue;
+            }
+            else if (count==9){
+                break;
+            }
+        }
+
+        function hello(name){
+            console.log('hello, ' + name);
+            return 'return '+name;
+        }
+        console.log(hello('er'));
+        
+
+        let global_var='全局';
+        function test(){
+            local_var='局部';
+            console.log(global_var);
+            console.log(local_var);
+        }
+        test();
+    </script>
+
+</body>
+</html>

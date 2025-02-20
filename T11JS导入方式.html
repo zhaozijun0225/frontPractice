@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 导入方法1：内联式 head或body里都可以放 -->
+    <!-- 方法2：外联 -->
+     <!-- 重复时会优先外联，不执行内联（可能看浏览器，google浏览器测试是这样） -->
+    <script>
+        console.log("hello,head内联");
+    </script>
+    <script  src="./js/myscript.js"></script>
+</head>
+<body>
+    <h1>111</h1>
+    <script>
+        console.log("hello,body内联");
+        alert("弹窗");
+    </script>
+</body>
+</html>

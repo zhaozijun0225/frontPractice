@@ -23,6 +23,28 @@
             left: 50px;
             top: 40px;
         }
+        .box-absolute1{
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            position: absolute;
+            left: 120px;
+        }
+        .box-absolute2{
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            position: absolute;
+            left: 320px;
+        }
+        .box-fixed{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            position: fixed;
+            right:0;
+            top:40%
+        }
     </style>
 
 </head>
@@ -32,11 +54,20 @@
         <div class="box-normal"></div>
         <div class="box-relative"></div>
         <div class="box-normal"></div>
-
-
+    </div>
+    <h1>绝对定位</h1>
+    <!-- 相当于自己一个单独图层，下面的会跟着原本图层上来，但是初始位置还是根据标准流的位置（根据最近的元素标签） -->
+    <div class="box1">
+        <div class="box-normal"></div>
+        <div class="box-absolute1"></div>
+        <div class="box-absolute2"></div>
+        <div class="box-normal"></div>
+        <div class="box-absolute2"></div>
     </div>
 
-
+    <h1>固定定位</h1>
+    <!-- 根据浏览器窗口定位，即使上下滑动也不变 -->
+    <div class="box-fixed">是兄弟就来看我</div>
 
 </body>
 </html>
