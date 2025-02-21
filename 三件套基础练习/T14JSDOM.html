@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+     <div class="box1">类选择器</div>
+     <div id="box2">id选择</div>
+     <div>普通div</div>
+     <button>点击</button>
+     <script>
+        // 赋值时需要var已经定义
+        var element_class=document.getElementsByClassName('box1')[0];
+        console.log(element_class);
+        let element_id=document.getElementById('box2');
+        console.log(element_id);
+        var element_tag=document.getElementsByTagName('div')[2];
+        console.log(element_tag);
+
+        element_class.innerHTML='<a href="#">跳转链接</a>';
+        element_id.innerText='<a href="#">跳转链接</a>';
+        element_tag.style.color='red';
+        element_tag.style.fontSize='20px';
+
+        var button_element=document.getElementsByTagName('button')[0];
+        console.log(button_element);
+
+        // button_element.onclick = function(){
+        //     alert('匿名函数');
+        // }
+        button_element.addEventListener('click',function(){
+            alert('addEvemtlistener');
+        })
+
+
+     </script>
+</body>
+</html>
