@@ -30,6 +30,12 @@ function buy(){
 <template>
 <div style="background-color: #888888">
   <h3>Son</h3>
+<!--  插槽-->
+  <slot name="title">默认值1</slot>
+  <button>
+    <slot name="btn">默认值2</slot>
+  </button>
+
   <div>账户:{{props.money}}</div>
   <div>图书:
   <li v-for="b in props.book">{{b}}</li>

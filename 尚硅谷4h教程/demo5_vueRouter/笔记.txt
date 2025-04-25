@@ -1,0 +1,8 @@
+以前：用springMVC，利用后端接受转发重定向
+vue Router：前后端分离，前端自己重定向，后端只需要给前端返回需要的数据
+↑维护路由表
+1.安装vue-router（看官方文档）
+2.配置路由表
+3.创建路由器
+4.vue实例使用router
+5.使用router-link和router-view

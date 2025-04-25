@@ -32,7 +32,19 @@ function moneyCost(sonComeData){
 
 <!--  <Son :money="money" :book="book"/>-->
 <!--  接收子:绑定事件-->
-<Son v-bind="data" @buy="moneyCost"/>
+<!--<Son v-bind="data" @buy="moneyCost"/>-->
+  <Son v-bind="data" @buy="moneyCost">
+    <template v-slot:title>
+      <button>父插槽传入</button>
+    </template>
+<!--    #简写v-slot-->
+    <template #btn>
+      父插槽传入2
+    </template>
+
+  </Son>
+
+
 </div>
 
 </template>
