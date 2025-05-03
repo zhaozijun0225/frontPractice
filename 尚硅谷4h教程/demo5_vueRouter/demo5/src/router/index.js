@@ -8,20 +8,23 @@ import UserPosts from "../views/user/UserPosts.vue";
 // :xxx是路径变量
 const routes = [
     {path:"/",component:Home},
-    {path:"/haha/:id",component:Haha},
+    {path:"/haha/:id/:name/:age",component:Haha,name:"Haha"},
     {path:"/hello",component:()=>import("../views/Hello.vue")},
     {
         path:'/user/:id',
         component: User,
+        name:'user', //组件在路由表里的名字
         children:[
             {
                 //  /表示从当前项目开始，我们需要相对路径，所以不加/
                 path:'profile',
                 component:UserProfile,
+                name:'profile',
             },
             {
                 path: 'posts',
-                component: UserPosts
+                component: UserPosts,
+                name:'posts',
             }
         ]
     }
@@ -34,6 +37,23 @@ const router = createRouter({
     routes: routes,
 
 });
+
+router.beforeEach(async (to, from, next) => {
+    console.log(to);
+    console.log(from);
+    console.log(next);
+
+    await fetch();
+
+
+//     返回false 取消导航，true继续导航，返回路径跳到指定页面
+    if(to.path=='hello'){
+        return '/'
+    }
+//     检查是否登录
+
+
+})
 
 
 // 3.导出路由器
