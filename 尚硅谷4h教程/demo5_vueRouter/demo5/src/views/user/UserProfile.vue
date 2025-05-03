@@ -1,20 +1,24 @@
 <script setup>
-import {useRoute, useRouter} from 'vue-router'
-let route = useRoute()
-let router = useRouter()
 
-function getInfo(){
-  console.log(route.params)
-  console.log(route.name)
-  console.log(route.path)
+import {useRoute, useRouter} from "vue-router";
+
+let route = useRoute();
+let router = useRouter();
+
+function getInfo() {
+  console.log(route);
+  console.log(route.params);
+  console.log(route.name);
+
 }
 
 function goHome(){
-  router.push('/')//指定跳转
+  router.push("/");
 }
 
 function goBack(){
-  router.go(-1)//相对跳转
+  router.go(-1);
+
 }
 
 </script>

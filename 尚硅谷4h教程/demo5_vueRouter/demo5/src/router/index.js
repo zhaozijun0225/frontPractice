@@ -18,8 +18,9 @@ const routes = [
             {
                 //  /表示从当前项目开始，我们需要相对路径，所以不加/
                 path:'profile',
+                name:"Profile",
                 component:UserProfile,
-                name:'profile',
+
             },
             {
                 path: 'posts',
